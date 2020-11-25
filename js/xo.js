@@ -11,7 +11,7 @@ const element9 = document.getElementById('9')
 const player1pointsBox = document.getElementById('player1Points')
 const player2pointsBox = document.getElementById('player2Points')
 const playerTurn = document.getElementById('playerTurn')
-
+const startNewGameButton = document.getElementById('startNewGameButton').onclick = startNewGame
 
 let symbolTrigger = true
 let winingConditions = [
