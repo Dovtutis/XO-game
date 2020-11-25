@@ -27,6 +27,7 @@ let winingConditions = [
 let elementArray = []
 let player1points = 0
 let player2points = 0
+let drawCounter = 0
 
 elementArray = [element1, element2, element3, element4, element5, element6, element7, element8, element9]
 elementArray.map(x => {
@@ -34,6 +35,8 @@ elementArray.map(x => {
 })
 
 function startNewGame(){
+    drawCounter = 0
+
     for (let i = 0; i < elementArray.length; i++) {
         elementArray[i].innerHTML = ""
     }
@@ -48,6 +51,7 @@ function addSymbol(event){
             playerTurn.innerText = "Now is CIRCLE player turn"
             symbolTrigger = false
             event.target.classList.add("x")
+            drawCounter++
             checkStatus("x")
             console.log(event)
         } else {
@@ -55,6 +59,7 @@ function addSymbol(event){
             symbolTrigger = true
             playerTurn.innerText = "Now is CROSS player turn"
             event.target.classList.add("o")
+            drawCounter++
             checkStatus("o")
         }
     } else {
@@ -70,10 +75,17 @@ function checkStatus (arg) {
             if (arg === "x") {
                 player1points++
                 player1pointsBox.innerText = `Player 1 points: ${player1points}`
+                startNewGame()
+                return
             } else {
                 player2points++
                 player2pointsBox.innerText = `Player 2 points: ${player2points}`
+                startNewGame()
+                return
             }
+        }
+        if (drawCounter === 9){
+            alert("DRAW!")
             startNewGame()
         }
     })
