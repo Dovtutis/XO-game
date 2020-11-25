@@ -41,17 +41,25 @@
 }
 
 #gameContainer {
-    width: 900px;
-    height: 900px;
-    margin: 30px 400px;
+    width: 850px;
+    height: 850px;
+    margin: 30px 420px;
     background-color: #bcb7b7;
     border-radius: 10px;
 }
 
+#resultBar {
+    margin: 10px 400px;
+    width: 900px;
+    height: 50px;
+    background-color: #999898;
+    border-radius: 15px;
+}
+
 .symbolContainer {
-    width: 280px;
-    height: 280px;
-    margin: 10px;
+    width: 240px;
+    height: 240px;
+    margin: 20px;
     border-radius: 10px;
     background-color: #5f5c5c;
 }
@@ -61,6 +69,18 @@
     font-size: 150px;
 }
 
+.pointerNon {
+    pointer-events: none;
+}
+
+.resultText {
+    line-height: 50px;
+    font-family: "Oswald", sans-serif;
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+    margin: 0 20px;
+}
 
 
 
