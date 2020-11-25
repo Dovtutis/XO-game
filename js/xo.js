@@ -36,6 +36,7 @@ elementArray.map(x => {
 
 function startNewGame(){
     drawCounter = 0
+    symbolTrigger = true
 
     for (let i = 0; i < elementArray.length; i++) {
         elementArray[i].innerHTML = ""
