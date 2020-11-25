@@ -40,6 +40,8 @@ function startNewGame(){
 
     for (let i = 0; i < elementArray.length; i++) {
         elementArray[i].innerHTML = ""
+        elementArray[i].classList.remove("x")
+        elementArray[i].classList.remove("o")
     }
     playerTurn.innerText = "Now is CROSS player turn"
 }
