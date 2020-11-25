@@ -39,51 +39,72 @@ function addSymbol(event){
     }
 }
 
+let winingConditions = [
+    [0, 1, 2],
+    [3, 4, 5],
+    [6, 7, 8],
+    [0, 3, 6],
+    [1, 4, 7],
+    [2, 5, 8],
+    [0, 4, 8],
+    [2, 4, 6]
+]
+
 function checkStatus (arg) {
-    if (element1.classList.contains(arg) && element2.classList.contains(arg) && element3.classList.contains(arg)){
-        alert(`Player ${arg} won`)
-        startNewGame()
-    }
-    if (element4.classList.contains(arg) && element5.classList.contains(arg) && element6.classList.contains(arg)){
-        alert(`Player ${arg} won`)
-        startNewGame()
-    }
-    if (element7.classList.contains(arg) && element8.classList.contains(arg) && element9.classList.contains(arg)){
-        alert(`Player ${arg} won`)
-        startNewGame()
-    }
+    winingConditions.map(x => {
 
-    if (element4.classList.contains(arg) && element5.classList.contains(arg) && element6.classList.contains(arg)){
-        alert(`Player ${arg} won`)
-        startNewGame()
-    }
-    if (element2.classList.contains(arg) && element6.classList.contains(arg) && element8.classList.contains(arg)){
-        alert(`Player ${arg} won`)
-        startNewGame()
-    }
-    if (element3.classList.contains(arg) && element6.classList.contains(arg) && element9.classList.contains(arg)){
-        alert(`Player ${arg} won`)
-        startNewGame()
-    }
-
-    if (element1.classList.contains(arg) && element5.classList.contains(arg) && element9.classList.contains(arg)){
-        alert(`Player ${arg} won`)
-        startNewGame()
-    }
-    if (element3.classList.contains(arg) && element5.classList.contains(arg) && element7.classList.contains(arg)){
-        alert(`Player ${arg} won`)
-        startNewGame()
-    }
+        if (elementArray[x[0]].classList.contains(arg) && elementArray[x[1]].classList.contains(arg) && elementArray[x[2]].classList.contains(arg)){
+            alert(`Player ${arg} won`)
+            startNewGame()
+        }
+    })
 }
 
-
-
-
-
-
-
-
-
+// function checkStatus (arg) {
+//     if (element1.classList.contains(arg) && element2.classList.contains(arg) && element3.classList.contains(arg)){
+//         alert(`Player ${arg} won`)
+//         startNewGame()
+//     }
+//     if (element4.classList.contains(arg) && element5.classList.contains(arg) && element6.classList.contains(arg)){
+//         alert(`Player ${arg} won`)
+//         startNewGame()
+//     }
+//     if (element7.classList.contains(arg) && element8.classList.contains(arg) && element9.classList.contains(arg)){
+//         alert(`Player ${arg} won`)
+//         startNewGame()
+//     }
+//
+//     if (element4.classList.contains(arg) && element5.classList.contains(arg) && element6.classList.contains(arg)){
+//         alert(`Player ${arg} won`)
+//         startNewGame()
+//     }
+//     if (element2.classList.contains(arg) && element6.classList.contains(arg) && element8.classList.contains(arg)){
+//         alert(`Player ${arg} won`)
+//         startNewGame()
+//     }
+//     if (element3.classList.contains(arg) && element6.classList.contains(arg) && element9.classList.contains(arg)){
+//         alert(`Player ${arg} won`)
+//         startNewGame()
+//     }
+//
+//     if (element1.classList.contains(arg) && element5.classList.contains(arg) && element9.classList.contains(arg)){
+//         alert(`Player ${arg} won`)
+//         startNewGame()
+//     }
+//     if (element3.classList.contains(arg) && element5.classList.contains(arg) && element7.classList.contains(arg)){
+//         alert(`Player ${arg} won`)
+//         startNewGame()
+//     }
+// }
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 
